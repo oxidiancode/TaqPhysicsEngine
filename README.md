@@ -3,7 +3,7 @@
 ### 1. Download the Library
 To use **TaqPhysicsEngine** in your project, you need the compiled static library. You can download it directly using the button below:
 
-[![Download libTaqPhysics.a](https://img.shields.io/badge/Download-libTaqPhysics.a-blue?style=for-the-badge&logo=git)](./Lib/)
+[![Download libTaqPhysics.a](https://img.shields.io/badge/Download-libTaqPhysics.a-blue?style=for-the-badge&logo=git)](https://github.com/oxidiancode/TaqPhysicsEngine/tree/main/lib)
 
 > **Manual Path:** `Lib/libTaqPhysics.a`
 
