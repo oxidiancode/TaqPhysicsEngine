@@ -1,8 +1,77 @@
-## 🚀 Installation and Usage
+## 🚀 Installation & Getting Started
 
-### 1. Obtaining the Library
-To include the engine in your project, simply download the compiled static library:
+### 1. Download the Library
+To use **TaqPhysicsEngine** in your project, you need the compiled static library. You can download it directly using the button below:
 
-[ ![Download Lib](https://img.shields.io/badge/İndir-tagphysicsengine-brightgreen?style=for-the-badge&logo=github) ](https://github.com/oxidiancode/TaqPhysicsEngine/raw/main/Lib/libTaqPhysics.a)
+[![Download libTaqPhysics.a](https://img.shields.io/badge/Download-libTaqPhysics.a-blue?style=for-the-badge&logo=git)](## 🚀 Installation & Getting Started
 
-> **Note:** When you click the button above, the library file will download directly. After downloading the file, place it in your project's library directory.
+### 1. Download the Library
+To use **TaqPhysicsEngine** in your project, you need the compiled static library. You can download it directly using the button below:
+
+[![Download libTaqPhysics.a](https://img.shields.io/badge/Download-libTaqPhysics.a-blue?style=for-the-badge&logo=git)](https://github.com/oxidiancode/TaqPhysicsEngine/blame/main/lib/libTaqPhysics.a)
+
+> **Manual Path:** `Lib/libTaqPhysics.a`
+
+### 2. Basic Usage Example
+After adding the library and headers to your project, you can initialize the world and start adding bodies like this:
+
+```cpp
+#include "world.hpp"
+#include <iostream>
+
+using namespace TaqPhysicEngine;
+
+int main() {
+    // 1. Initialize the Physics World
+    World world;
+    world.SetGravity(0.0f, 9.81f); // Set standard Earth gravity
+
+    // 2. Create a Dynamic Body (width, height, mass)
+    Body* box = new Body(2.0f, 2.0f, 1.0f);
+    box->position = { 0.0f, -10.0f }; // Start in the air
+    
+    // 3. Add to the World
+    world.AddBody(box);
+
+    // 4. Simulation Loop
+    float dt = 1.0f / 60.0f;
+    for (int i = 0; i < 60; ++i) {
+        world.Step(dt);
+        std::cout << "Box Y Position: " << box->position.y << std::endl;
+    }
+
+    return 0;
+})
+
+> **Manual Path:** `Lib/libTaqPhysics.a`
+
+### 2. Basic Usage Example
+After adding the library and headers to your project, you can initialize the world and start adding bodies like this:
+
+```cpp
+#include "world.hpp"
+#include <iostream>
+
+using namespace TaqPhysicEngine;
+
+int main() {
+    // 1. Initialize the Physics World
+    World world;
+    world.SetGravity(0.0f, 9.81f); // Set standard Earth gravity
+
+    // 2. Create a Dynamic Body (width, height, mass)
+    Body* box = new Body(2.0f, 2.0f, 1.0f);
+    box->position = { 0.0f, -10.0f }; // Start in the air
+    
+    // 3. Add to the World
+    world.AddBody(box);
+
+    // 4. Simulation Loop
+    float dt = 1.0f / 60.0f;
+    for (int i = 0; i < 60; ++i) {
+        world.Step(dt);
+        std::cout << "Box Y Position: " << box->position.y << std::endl;
+    }
+
+    return 0;
+}
