@@ -4,6 +4,7 @@
 
 int main()
 {
-
+    TestJump();
+    TestCollision();
     TestMultiCollision();
 }

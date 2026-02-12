@@ -1,0 +1,39 @@
+# --- Build Artifacts ---
+# Object files
+*.o
+*.obj
+
+# Static and Dynamic Libraries
+
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Executable
+*.exe
+*.out
+app
+
+# --- IDE and Editor Settings ---
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+out/
+build/
+*.sln
+*.vcxproj
+*.user
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# --- Temporary Files ---
+*.log
+*.tmp
+.DS_Store (Mac kullananlar için)
+
